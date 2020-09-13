@@ -11,7 +11,7 @@ int main(int argc, char** argv)
 
     ros::Publisher pub = node.advertise<std_msgs::String>("listener", 10); 
 
-    ros::Rate loop_rate(10);
+    ros::Rate loop_rate(1);
 
     std::string fortune = "";
     char buffer[100];

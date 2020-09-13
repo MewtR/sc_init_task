@@ -30,11 +30,11 @@ var listener = new ROSLIB.Topic({
 
 listener.subscribe(function(message){
     console.log('Received message on '+ listener.name + ': '+message.data);
-    $("span").text(message.data);
+    $("i").text(message.data);
 });
         </script>
 
     </head>
-<h1>{{ msg }}</h1>
-<p>Here is the message that I recieved: <span></span></p>
+<h3>{{ msg }}</h3>
+<p>Here is the quote that I recieved: <span><i></i></span></p>
 </html>
