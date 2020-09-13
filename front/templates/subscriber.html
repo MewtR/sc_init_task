@@ -4,6 +4,8 @@
         <meta charset="utf-8" />
         <script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
 <script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+			  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
         <script>
             var ros = new ROSLIB.Ros({
@@ -28,12 +30,11 @@ var listener = new ROSLIB.Topic({
 
 listener.subscribe(function(message){
     console.log('Received message on '+ listener.name + ': '+message.data);
+    $("span").text(message.data);
 });
         </script>
+
     </head>
-{% if msg %}
 <h1>{{ msg }}</h1>
-{% else %}
-<h3>Nothing to see here</h3>
-{% endif %}
+<p>Here is the message that I recieved: <span></span></p>
 </html>
