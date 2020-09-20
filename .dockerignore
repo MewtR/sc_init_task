@@ -1,0 +1,17 @@
+compile_commands.json
+venv/
+
+*.pyc
+__pycache__/
+
+instance/
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+dist/
+build/
+*.egg-info/
+docker-compose.yml
+Dockerfile
